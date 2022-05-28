@@ -8,3 +8,9 @@
 
 ## 3.	修改老師之前教案給的index.html，直接把剛剛在資料庫拿到的資料放到data
 詳情請看index.html的註解
+
+## 4. 網頁結果
+<img src="step3_2.jpg" alt="aiot" width="500"/>
+
+將鼠標放在不同線上還可以凸顯該線條
+<img src="step3_ˇ.jpg" alt="aiot" width="500"/>
