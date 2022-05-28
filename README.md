@@ -5,6 +5,6 @@
 3. 在visual studio 連結這個新創的repository
 4. 建立一個新的branch，如這個step1 branch
   [補充] 建立new branch的方法
-  ![截圖](https://imgur.com/a/Rcyuo7f)
+  ![截圖](step1_1.jpg)
 6. vs code 安裝 python extension
 7. pip install flask, pandas, sklearn
