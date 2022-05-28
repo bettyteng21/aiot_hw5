@@ -1,4 +1,4 @@
-# 作業5-step1
+# 作業5-step1 安裝環境
 
 ## 1. 安裝 [visual studio code](https://code.visualstudio.com/)
 ## 2. 建立一個new repository (aiot_hw5)
