@@ -7,4 +7,4 @@
 <img src="step2_2.jpg" alt="aiot" width="500"/>
 
 ## 3.	匯入老師給的sensors資料庫(sensors.sql)
-<img src="step2_3.jpg" alt="aiot" width="500"/>
+<img src="step2_3.jpg" alt="aiot" height="500"/>
