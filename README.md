@@ -13,4 +13,4 @@
 <img src="step3_2.jpg" alt="aiot" width="500"/>
 
 將鼠標放在不同線上還可以凸顯該線條
-<img src="step3_ˇ.jpg" alt="aiot" width="500"/>
+<img src="step3_.jpg" alt="aiot" width="500"/>
