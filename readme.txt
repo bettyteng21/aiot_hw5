@@ -1,1 +1,0 @@
-please see the README instead
