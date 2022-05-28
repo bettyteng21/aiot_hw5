@@ -12,6 +12,6 @@
 ## 4. 網頁結果
 <img src="step3_2.jpg" alt="aiot" width="700"/>
 
-將鼠標放在不同線上還可以凸顯該線條/
+將鼠標放在不同線上還可以凸顯該線條\
 <img src="step3_3.jpg" alt="aiot" width="700"/>
 
