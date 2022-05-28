@@ -5,10 +5,10 @@
 ## 3. 在visual studio 連結這個新創的repository
 ## 4. 建立一個新的branch，如這個step1 branch
 [補充] 建立new branch的方法\
-<img src="step1_1.jpg" alt="aiot" width="200"/>
+<img src="step1_1.jpg" alt="aiot" width="350"/>
 
 [補充] 跳到別的branch的方法\
-<img src="step1_2.jpg" alt="aiot" width="200"/>
+<img src="step1_2.jpg" alt="aiot" width="350"/>
 
 ## 5. vs code 安裝 python extension
 ## 6. pip install flask, pandas, sklearn
