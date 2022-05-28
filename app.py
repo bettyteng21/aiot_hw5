@@ -1,26 +1,69 @@
-from flask import Flask
-from flask import render_template
-import pymysql
-
+from flask import Flask, render_template, jsonify
+import json
+ 
 app = Flask(__name__)
-@app.route('/')
-def index():
-  # 連結database
-  conn = pymysql.connect(host='localhost',user='test123',password='test123',db='aiotdb')
-  cur = conn.cursor()
+ 
+@app.route("/data.json")
+def data():
+    timeInterval = 1000
+    data = pd.DataFrame()
+    featureList = ['market-price', 
+                   'trade-volume']
+    for feature in featureList:
+        url = "https://api.blockchain.info/charts/"+feature+"?timespan="+str(timeInterval)+"days&format=json"
+        data['time'] = pd.DataFrame(json.loads(urllib.request.urlopen(url).read().decode('utf-8'))['values'])['x']*1000
+        data[feature] = pd.DataFrame(json.loads(urllib.request.urlopen(url).read().decode('utf-8'))['values'])['y']
+    result = data.to_dict(orient='records')
+    seq = [[item['time'], item['market-price'], item['trade-volume']] for item in result]
+    return jsonify(seq)
+ 
 
-  # 從資料庫撈我要的值，並執行 SQL 指令
-  sql = "SELECT `id`,`time`,`value`,`temp`,`humi`,`status` FROM sensors"
-  try:
-    cur.execute(sql)
-    data = cur.fetchall() # 取出全部的資料
-  except:
-    print("Error: unable to fetch data")
+@app.route("/")
+def noAI():
+    return render_template('indexNoAI.html')    
 
-  # 關閉 SQL 連線
-  conn.close()
-  return render_template('index.html',data=data)
+@app.route("/setRandom")
+def getData():
+    myserver ="localhost"
+    myuser="test123"
+    mypassword="test123"
+    mydb="aiotdb"
+    
+    debug =0
+    from  pandas import DataFrame as df
+    import pandas as pd                     # 引用套件並縮寫為 pd
+    import numpy as np
+
+    import pymysql.cursors
+    #db = mysql.connector.connect(host="140.120.15.45",user="toto321", passwd="12345678", db="lightdb")
+    #conn = mysql.connector.connect(host=myserver,user=myuser, passwd=mypassword, db=mydb)
+    conn = pymysql.connect(host=myserver,user=myuser, passwd=mypassword, db=mydb)
+
+    c = conn.cursor()
+ 
+
+    #====== 執行 MySQL 查詢指令 ======#
+    c.execute("update sensors set value = RAND()*1000 where true")
+    conn.commit()
+    
+    c.execute("SELECT * FROM sensors")
+
+    #====== 取回所有查詢結果 ======#
+    results = c.fetchall()
+    print(type(results))
+    print(results[:10])
+    if debug:
+        input("pause ....select ok..........")
+
+    test_df = df(list(results),columns=['id','time','value','temp','humi','status'])
+
+    print(test_df.head(10))
+    result = test_df.to_dict(orient='records')
+    seq = [[item['id'], item['time'], item['value'], item['temp'], item['humi'], item['status']] for item in result]
+    return jsonify(seq)
+    ######### cursor close, conn close
+    c.close()
+    conn.close()
 
 if __name__ == '__main__':
-  app.debug = True
-  app.run(port=8003)
+    app.run(debug=True, use_reloader=True)
