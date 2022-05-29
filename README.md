@@ -9,5 +9,5 @@
 <img src="step5_1.jpg" alt="drawing" width="600"/>
 
 接下來按下call AI，結果如下，紅點、綠點會依照model去顯示\
-<img src="step5_.jpg" alt="drawing" width="600"/>
+<img src="step5_2.jpg" alt="drawing" width="600"/>
 
