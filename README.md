@@ -14,7 +14,7 @@
 ## 6. pip install flask, pandas, sklearn
 都安裝完，即可開始使用flask和machine learning
 
-補充:
+## 補充:
 1. 連接github到vscode(要用新版的vs code)\
 **[法1]**\
 ```	git clone: https://github.com/bettyteng21/1102-AIoT.git```
