@@ -15,10 +15,9 @@
 	<link  rel= "stylesheet"  href= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" >
 
 	<script src= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" ></script>
-  
 
-
-
+    
+   
 	<script>
 	function highcharsinit(){
 		$('#container').highcharts({
@@ -68,7 +67,7 @@
 
 	$(function () {
 		$.ajax({									  
-			url: '/setRandom',//連接的URL	  
+			url: '/getPredict',//連接的URL	  
 			data: "{}",//夾帶的參數
 			dataType: 'json', //資料格式 
 			success: function(data)	//傳送成功的function
@@ -112,16 +111,17 @@
 		<button class = "btn btn-info"id = "trigger">Trigger NB</button> 
 		<button class = "btn btn-link"id = "Random">Random</button>
 		-->
-		
-		
 	</div>
-    <script>
-        $('#bSetRandom').click(function(){
-          window.location.href='/noAI';
-        });
-         $('#bCallAI').click(function(){
-           window.location.href='/';
-        });
-    </script>	
+
+
+<script>
+    $('#bSetRandom').click(function(){
+      window.location.href='/noAI';
+    });
+     $('#bCallAI').click(function(){
+      window.location.href='/';
+    });
+    </script>
+	
 </body>
 </html>
