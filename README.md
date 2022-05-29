@@ -2,7 +2,7 @@
 尚未加上隨機生成與機器學習，單純使用flask去讀資料庫的資料
 
 ## 1.	建一個project folder
-需包含:\
+需包含:
 1. python檔案
 2. templates資料夾，裡面建一個index.html
 <img src="step3_1.jpg" alt="aiot" width="350"/>
