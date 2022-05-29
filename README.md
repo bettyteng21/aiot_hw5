@@ -3,7 +3,7 @@
 ## 網頁結果
 每次按下set random後都會是random的值(詳情請見step4的branch)\
 之後再按下call AI，即可得到用我們import的model(myModel.pgz)判斷出的結果\
-例子:\
+例子:
 
 這是按下set random後跑出來的隨機結果，紅點、綠點是隨機分配\
 <img src="step5_1.jpg" alt="drawing" width="600"/>
